@@ -18,12 +18,12 @@
 		A2000000000000000000009 /* ComposePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000009 /* ComposePreviewView.swift */; };
 		A200000000000000000000A /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100000000000000000000A /* MenuBarView.swift */; };
 		A200000000000000000000B /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100000000000000000000B /* SettingsStore.swift */; };
-		A2000000000000000000010 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000013 /* SettingsView.swift */; };
-		A2000000000000000000011 /* MenuBarState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000014 /* MenuBarState.swift */; };
 		A200000000000000000000C /* Compose.txt in Resources */ = {isa = PBXBuildFile; fileRef = A100000000000000000000C /* Compose.txt */; };
 		A200000000000000000000D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A100000000000000000000D /* Assets.xcassets */; };
 		A200000000000000000000E /* SnippetComposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100000000000000000000E /* SnippetComposeTests.swift */; };
 		A200000000000000000000F /* Compose.txt in Resources */ = {isa = PBXBuildFile; fileRef = A100000000000000000000C /* Compose.txt */; };
+		A2000000000000000000010 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000013 /* SettingsView.swift */; };
+		A2000000000000000000011 /* MenuBarState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000014 /* MenuBarState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +48,6 @@
 		A1000000000000000000009 /* ComposePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposePreviewView.swift; sourceTree = "<group>"; };
 		A100000000000000000000A /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		A100000000000000000000B /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
-		A1000000000000000000013 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		A1000000000000000000014 /* MenuBarState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarState.swift; sourceTree = "<group>"; };
 		A100000000000000000000C /* Compose.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Compose.txt; sourceTree = "<group>"; };
 		A100000000000000000000D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A100000000000000000000E /* SnippetComposeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetComposeTests.swift; sourceTree = "<group>"; };
@@ -57,6 +55,8 @@
 		A1000000000000000000010 /* SnippetCompose.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SnippetCompose.entitlements; sourceTree = "<group>"; };
 		A1000000000000000000011 /* SnippetCompose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnippetCompose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1000000000000000000012 /* SnippetComposeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnippetComposeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1000000000000000000013 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A1000000000000000000014 /* MenuBarState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -428,11 +428,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				AUTOMATION_APPLE_EVENTS = NO;
 				CODE_SIGN_ENTITLEMENTS = SnippetCompose/SnippetCompose.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6Z4FVAP3Z7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = SnippetCompose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -443,6 +451,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.snippetcompose.SnippetCompose;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
+				RUNTIME_EXCEPTION_ALLOW_JIT = NO;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = NO;
+				RUNTIME_EXCEPTION_DEBUGGING_TOOL = NO;
+				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
+				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = NO;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -453,11 +467,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				AUTOMATION_APPLE_EVENTS = NO;
 				CODE_SIGN_ENTITLEMENTS = SnippetCompose/SnippetCompose.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6Z4FVAP3Z7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = SnippetCompose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,6 +490,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.snippetcompose.SnippetCompose;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES = NO;
+				RUNTIME_EXCEPTION_ALLOW_JIT = NO;
+				RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY = NO;
+				RUNTIME_EXCEPTION_DEBUGGING_TOOL = NO;
+				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
+				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = NO;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
