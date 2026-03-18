@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode — user-specific state (breakpoints, window layout, etc.)
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+
+# Build artifacts
+build/
+DerivedData/
+*.ipa
+*.xcarchive
+
+# Claude Code local files (conversation history, memory)
+.claude/
