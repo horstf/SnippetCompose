@@ -31,7 +31,7 @@ From the settings a Compose file can be created in `~/.compose/Compse` which all
 
 Add entries in X11 format:
 ```
-<Multi_key> <a> <b> : "result"
+<Multi_key> <key_1> <key_2> : "result_character"
 ```
 
 Click "Reload" in Settings after editing the file.
