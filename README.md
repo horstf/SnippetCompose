@@ -1,5 +1,7 @@
 # SnippetCompose
 
+![SnippetCompose demo](assets/example.gif)
+
 A lightweight macOS menu bar app that brings X11-style compose key sequences system-wide. Type a prefix (default `::`) followed by a short sequence to insert Unicode characters in any app.
 
 ```
@@ -27,7 +29,7 @@ A suggestions popup appears near the cursor while composing in apps that support
 
 ## Custom sequences
 
-From the settings a Compose file can be created in `~/.compose/Compse` which allows editing of the included Compose sequences as well as adding new ones.
+From the settings a Compose file can be created in `~/.compose/Compose` which allows editing of the included Compose sequences as well as adding new ones.
 
 Add entries in X11 format:
 ```
